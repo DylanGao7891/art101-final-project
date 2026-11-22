@@ -1,19 +1,21 @@
 
-let currentIndex = 0;
-const track = document.getElementById('track');
-const slides = document.querySelectorAll('.slider-track img');
+const currentIndexes = {
+eytan: 0,
+dylan: 0
+};
+
+function moveSlide(artist, direction) {
+const track = document.getElementById(artist + '-track');
+const slides = track.querySelectorAll('img');
 const totalSlides = slides.length;
 
-function moveSlide(direction) {
-  currentIndex += direction;
+currentIndexes[artist] += direction;
 
-  // Loop back to start or end
-  if (currentIndex < 0) {
-    currentIndex = totalSlides - 1;
-  } else if (currentIndex >= totalSlides) {
-    currentIndex = 0;
-  }
+if (currentIndexes[artist] < 0) {
+currentIndexes[artist] = totalSlides - 1;
+} else if (currentIndexes[artist] >= totalSlides) {
+currentIndexes[artist] = 0;
+}
 
-  // Slide horizontally by multiples of 100%
-  track.style.transform = `translateX(-${currentIndex * 100}%)`;
+track.style.transform = `translateX(-${currentIndexes[artist] * 100}%)`;
 }
