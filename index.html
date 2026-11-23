@@ -1,13 +1,57 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <title>ART101 final project</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Art Gallery</title>
+<link rel="stylesheet" href="index.css">
 </head>
-
 <body>
-    <h1>Our final project</h1>
-</body>
 
+<h1>Welcome to Our Art Gallery</h1>
+
+<div class="gallery">
+
+<section class="artist-section">
+<h2>Eytan's Art Gallery</h2>
+
+<div class="slider-container">
+<div class="slider-track" id="eytan-track">
+
+<img src="images/eytan1.jpg" alt="Eytan artwork 1">
+<img src="images/eytan2.jpg" alt="Eytan artwork 2">
+<img src="images/eytan3.jpg" alt="Eytan artwork 3">
+<img src="images/eytan4.jpg" alt="Eytan artwork 4">
+
+</div>
+
+<button class="btn prev" onclick="moveSlide('eytan', -1)">&#10094;</button>
+<button class="btn next" onclick="moveSlide('eytan', 1)">&#10095;</button>
+</div>
+
+</section>
+
+<section class="artist-section">
+<h2>Dylan's Art Gallery</h2>
+
+<div class="slider-container">
+<div class="slider-track" id="dylan-track">
+
+<img src="images/dylan1.jpg" alt="Dylan artwork 1">
+<img src="images/dylan2.jpg" alt="Dylan artwork 2">
+<img src="images/dylan3.jpg" alt="Dylan artwork 3">
+
+</div>
+
+<button class="btn prev" onclick="moveSlide('dylan', -1)">&#10094;</button>
+<button class="btn next" onclick="moveSlide('dylan', 1)">&#10095;</button>
+</div>
+
+</section>
+
+</div>
+
+<script src="index.js"></script>
+</body>
 </html>
